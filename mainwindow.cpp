@@ -20,9 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
 }
 
 MainWindow::~MainWindow()
-{
-    delete ui;
-}
+{    delete ui;}
 void MainWindow::on_Bmul_clicked()//乘号
 {
     s+="*";

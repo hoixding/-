@@ -91,12 +91,12 @@ void my_Stack<T>::push(const T& x) {
 }
 template <class T>
 T my_Stack<T>::pop() {
-    if (empty());
+
     return data[top--];
 }
 template <class T>
 T my_Stack<T>::getTop() const {
-    if (empty());
+
     return data[top];
 }
 
