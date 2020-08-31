@@ -100,6 +100,4 @@ T my_Stack<T>::getTop() const {
     return data[top];
 }
 
-
-
 #endif // OP_H

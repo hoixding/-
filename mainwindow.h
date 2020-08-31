@@ -211,7 +211,9 @@ public:
            return num.pop();
     }
 
-    QString s="";
+    QString s_exp="";//传入op的参数
+    QString s_see="";//看到的表达式
+    QString s_out="";//结果
 private slots:
     void on_B1_clicked();
 
@@ -243,9 +245,9 @@ private slots:
 
     void on_Bsub_clicked();
 
-    void on_Badd_clicked();
+   void on_Badd_clicked();
 
-    void on_Bce_clicked();
+    void on_Bac_clicked();
 
 private:
     Ui::MainWindow *ui;
