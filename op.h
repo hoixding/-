@@ -102,5 +102,4 @@ T my_Stack<T>::getTop() const {
 
 
 
-
 #endif // OP_H
