@@ -373,7 +373,8 @@ void MainWindow::on_Beq_clicked()//等于
         s_out=QString::number(r);
         s_exp.clear();
         s_see.clear();
-        cur_senacc=0;//参数清零
+        cur_senacc=0;
+        sp=0;//参数清零
 
         ui->resout->setText(s_out);
     }
@@ -464,6 +465,7 @@ void MainWindow::on_Bac_clicked()
     s_see.clear();
     s_out.clear();
     cur_senacc=0;
+    sp=0;
     ui->expout->setText("0");
     ui->resout->setText("0");
 }
@@ -497,3 +499,12 @@ void MainWindow::on_Bcur_right_clicked()
         }
 }
 
+void MainWindow::on_Bback_clicked()
+{
+    if(!s_exp.isEmpty())
+    {
+        s_exp= s_exp.left(s_exp.size() - 1);
+        s_see= s_see.left(s_see.size() - 1);
+        ui->expout->setText(s_see);
+    }
+}
