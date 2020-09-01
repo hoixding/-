@@ -249,6 +249,8 @@ private slots:
 
     void on_Bac_clicked();
 
+    void on_Bcur_clicked();
+
 private:
     Ui::MainWindow *ui;
 

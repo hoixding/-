@@ -6,7 +6,7 @@
 #include <QLineEdit>
 #include"op.h"
 
-
+int sentry=-1;//哨兵，-1、1为有效值
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -60,7 +60,6 @@ void MainWindow::on_B3_clicked()
     s_see+="3";
     ui->expout->setText(s_see);
 }
-
 
 void MainWindow::on_B4_clicked()
 {
@@ -145,5 +144,22 @@ void MainWindow::on_Badd_clicked()
 {
     s_see+="+";
     s_exp+="+";
+    ui->expout->setText(s_see);
+}
+
+void MainWindow::on_Bcur_clicked()
+{
+    if(sentry==-1)
+    {
+        s_exp+="(";
+        s_see+="(";
+        sentry=1;
+    }
+    else if ((sentry==1)&&(s_exp[s_exp.length()-1]!='(')) {
+
+        s_exp+=")";
+        s_see+=")";
+        sentry=-1;
+    }
     ui->expout->setText(s_see);
 }

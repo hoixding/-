@@ -137,9 +137,9 @@
    <widget class="QPushButton" name="B0">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>70</x>
       <y>260</y>
-      <width>111</width>
+      <width>51</width>
       <height>41</height>
      </rect>
     </property>
@@ -283,6 +283,19 @@
     </property>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Bcur">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>52</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>（）</string>
     </property>
    </widget>
   </widget>
