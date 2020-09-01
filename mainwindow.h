@@ -211,6 +211,15 @@ public:
            return num.pop();
     }
 
+    bool exp_legal()//判断s_exp上一个是否为+-*/.( 不是返回ture
+    {
+        if((s_exp[s_exp.length()-1]!="(")&&(s_exp[s_exp.length()-1]!="+")&&(s_exp[s_exp.length()-1]!="-")&&\
+                (s_exp[s_exp.length()-1]!="*")&&(s_exp[s_exp.length()-1]!="/")&&(s_exp[s_exp.length()-1]!="."))
+            return 1;
+        else
+            return 0;
+    }
+
     QString s_exp="";//传入op的参数
     QString s_see="";//看到的表达式
     QString s_out="";//结果

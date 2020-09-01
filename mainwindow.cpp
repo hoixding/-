@@ -155,7 +155,7 @@ void MainWindow::on_Bcur_clicked()
         s_see+="(";
         sentry=1;
     }
-    else if ((sentry==1)&&(s_exp[s_exp.length()-1]!='(')) {
+    else if ((sentry==1)&&(exp_legal())) {
 
         s_exp+=")";
         s_see+=")";
