@@ -6,7 +6,6 @@
 #include <QLineEdit>
 #include"op.h"
 
-int cur_sentry=-1;//括号哨兵，-1、1为有效值
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -16,6 +15,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);//创建窗口
     ui->expout->setText("0");//设置初始文本为0
     ui->resout->setText("0");//设置初始文本为0
+
+//    int i=s_exp.size();
+//    s_out=QString::number(i);
+//    ui->resout->setText(s_out);
 
 }
 
@@ -215,7 +218,7 @@ double MainWindow::op(std::string a)
        return num.pop();
 }
 
-bool MainWindow::exp_legal()//判断是否以+-*/.（结尾， 不是返回ture
+bool MainWindow::exp_legal()//判断是否以+-*/.结尾， 不是返回ture
 {
     if((s_exp[s_exp.length()-1]!='(')&&(s_exp[s_exp.length()-1]!='+')&&(s_exp[s_exp.length()-1]!='-')&&\
             (s_exp[s_exp.length()-1]!='*')&&(s_exp[s_exp.length()-1]!='/')&&(s_exp[s_exp.length()-1]!='.'))
@@ -302,8 +305,10 @@ void MainWindow::on_Beq_clicked()//等于
 
         ui->resout->setText(s_out);
         //ui->expout->setText(s_see);
+        cur_senacc=0;//清零括号计数器
         s_exp=s_out;
         s_see=s_out;
+
     }
 }
 
@@ -394,21 +399,31 @@ void MainWindow::on_Bac_clicked()
     ui->resout->setText("0");
 }
 
-void MainWindow::on_Bcur_clicked()
+void MainWindow::on_Bcur_left_clicked()
 {
-    if(cur_sentry==-1)
+    if(s_exp.isNull())
+    {
+        s_exp+='(';
+        s_see+='(';
+        cur_senacc+=1;
+        ui->expout->setText(s_see);
+    }
+    else if((!exp_legal())&&(s_exp[s_exp.length()-1]!='.'))
     {
         s_exp+="(";
         s_see+="(";
-        cur_sentry=1;
+        cur_senacc+=1;
+        ui->expout->setText(s_see);
     }
-    else if ((cur_sentry==1)&&(exp_legal()))
-    {
-
-        s_exp+=")";
-        s_see+=")";
-        cur_sentry=-1;
-    }
-    ui->expout->setText(s_see);
 }
 
+void MainWindow::on_Bcur_right_clicked()
+{
+    if((exp_legal())&&(cur_senacc>0))
+        {
+            s_exp+=")";
+            s_see+=")";
+            cur_senacc-=1;
+            ui->expout->setText(s_see);
+        }
+}
