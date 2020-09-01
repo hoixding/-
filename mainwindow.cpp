@@ -7,15 +7,21 @@
 #include <QDebug>
 #include"op.h"
 
+QFont font_big ("KaiTi",30,52);
+QFont font_normal ("KaiTi",14,50);
+QFont font_little ("KaiTi",10,25);
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     QDesktopWidget * desktop = QApplication::desktop();
+
+
     move((desktop->width() - this->width())/2,(desktop->height() - this->height())/2);//窗口参数居中
     ui->setupUi(this);//创建窗口
+
     ui->expout->setText("0");//设置初始文本为0
-    ui->resout->setText("0");//设置初始文本为0
+    ui->resout->setText("");//设置初始文本为空
 
 }
 
@@ -264,8 +270,15 @@ bool MainWindow::exp_legal()//判断是否以 +-*/.( 结尾， 不是返回ture
     }
 }
 
+void MainWindow::setfont_normal()
+{
+    ui->resout->setFont(font_little);
+    ui->expout->setFont(font_normal);
+}
+
 void MainWindow::on_Bmul_clicked()//乘号
 {
+    setfont_normal();
     if(s_exp.isEmpty())
     {
         s_exp=s_out;
@@ -291,6 +304,7 @@ void MainWindow::on_Bmul_clicked()//乘号
 
 void MainWindow::on_Bdiv_clicked()//除号
 {
+    setfont_normal();
     if(s_exp.isEmpty())
     {
         s_exp=s_out;
@@ -316,6 +330,7 @@ void MainWindow::on_Bdiv_clicked()//除号
 
 void MainWindow::on_Badd_clicked()//加法
 {
+    setfont_normal();
     if(s_exp.isEmpty())
     {
         s_exp=s_out;
@@ -341,6 +356,7 @@ void MainWindow::on_Badd_clicked()//加法
 
 void MainWindow::on_Bsub_clicked()//减法
 {
+    setfont_normal();
     if(s_exp.isEmpty())
     {
         s_exp=s_out;
@@ -376,6 +392,8 @@ void MainWindow::on_Beq_clicked()//等于
         cur_senacc=0;
         sp=0;//参数清零
 
+        ui->resout->setFont(font_big);
+        ui->expout->setFont(font_little);
         ui->resout->setText(s_out);
     }
 
@@ -383,6 +401,7 @@ void MainWindow::on_Beq_clicked()//等于
 
 void MainWindow::on_B1_clicked()
 {
+    setfont_normal();
     s_exp+="1";
     s_see+="1";
     ui->expout->setText(s_see);
@@ -390,6 +409,7 @@ void MainWindow::on_B1_clicked()
 
 void MainWindow::on_B2_clicked()
 {
+    setfont_normal();
     s_exp+="2";
     s_see+="2";
     ui->expout->setText(s_see);
@@ -397,6 +417,7 @@ void MainWindow::on_B2_clicked()
 
 void MainWindow::on_B3_clicked()
 {
+    setfont_normal();
     s_exp+="3";
     s_see+="3";
     ui->expout->setText(s_see);
@@ -404,6 +425,7 @@ void MainWindow::on_B3_clicked()
 
 void MainWindow::on_B4_clicked()
 {
+    setfont_normal();
     s_exp+="4";
     s_see+="4";
     ui->expout->setText(s_see);
@@ -412,6 +434,7 @@ void MainWindow::on_B4_clicked()
 
 void MainWindow::on_B5_clicked()
 {
+    setfont_normal();
     s_exp+="5";
     s_see+="5";
     ui->expout->setText(s_see);
@@ -419,6 +442,7 @@ void MainWindow::on_B5_clicked()
 
 void MainWindow::on_B6_clicked()
 {
+    setfont_normal();
     s_exp+="6";
     s_see+="6";
     ui->expout->setText(s_see);
@@ -427,6 +451,7 @@ void MainWindow::on_B6_clicked()
 
 void MainWindow::on_B7_clicked()
 {
+    setfont_normal();
     s_exp+="7";
     s_see+="7";
     ui->expout->setText(s_see);
@@ -434,12 +459,14 @@ void MainWindow::on_B7_clicked()
 
 void MainWindow::on_B8_clicked()
 {
+    setfont_normal();
     s_exp+="8";
     s_see+="8";
     ui->expout->setText(s_see);
 }
 void MainWindow::on_B9_clicked()
 {
+    setfont_normal();
     s_exp+="9";
     s_see+="9";
     ui->expout->setText(s_see);
@@ -447,6 +474,7 @@ void MainWindow::on_B9_clicked()
 
 void MainWindow::on_B0_clicked()
 {
+    setfont_normal();
     s_exp+="0";
     s_see+="0";
     ui->expout->setText(s_see);
@@ -454,6 +482,7 @@ void MainWindow::on_B0_clicked()
 
 void MainWindow::on_Bdot_clicked()
 {
+    setfont_normal();
     s_exp+=".";
     s_see+=".";
     ui->expout->setText(s_see);
@@ -461,6 +490,7 @@ void MainWindow::on_Bdot_clicked()
 
 void MainWindow::on_Bac_clicked()
 {
+    setfont_normal();
     s_exp.clear();
     s_see.clear();
     s_out.clear();
@@ -472,6 +502,7 @@ void MainWindow::on_Bac_clicked()
 
 void MainWindow::on_Bcur_left_clicked()
 {
+    setfont_normal();
     if(s_exp.isEmpty())
     {
         s_exp+="(";
@@ -490,6 +521,7 @@ void MainWindow::on_Bcur_left_clicked()
 
 void MainWindow::on_Bcur_right_clicked()
 {
+    setfont_normal();
     if((exp_legal())&&(cur_senacc>0))
         {
             s_exp+=")";
@@ -501,6 +533,7 @@ void MainWindow::on_Bcur_right_clicked()
 
 void MainWindow::on_Bback_clicked()
 {
+    setfont_normal();
     if(!s_exp.isEmpty())
     {
         s_exp= s_exp.left(s_exp.size() - 1);
