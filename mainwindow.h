@@ -20,7 +20,7 @@ public:
     double op(std::string a);
     bool exp_legal();
     void setfont_normal();
-    int cur_senacc=0,sp=0;//括号计数器，特殊符号计数器
+    int cur_senacc=0;//括号计数器
     QString s_exp="";//传入op的参数，默认为空
     QString s_see="";//看到的表达式
     QString s_out="";//结果

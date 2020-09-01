@@ -311,34 +311,24 @@
      <string>（</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Bneg">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>260</y>
-      <width>52</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>+/-</string>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>350</y>
-      <width>261</width>
+      <x>10</x>
+      <y>320</y>
+      <width>291</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="text">
+     <string>测试框，相关代码在等号内</string>
     </property>
    </widget>
    <widget class="QPushButton" name="Bback">
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>300</y>
+      <y>260</y>
       <width>52</width>
       <height>41</height>
      </rect>
