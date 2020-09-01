@@ -62,6 +62,7 @@ private slots:
 
     void on_Bcur_right_clicked();
 
+
 private:
     Ui::MainWindow *ui;
 
