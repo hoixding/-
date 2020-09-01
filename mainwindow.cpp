@@ -17,10 +17,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->expout->setText("0");//设置初始文本为0
     ui->resout->setText("0");//设置初始文本为0
 
-//    int i=s_exp.size();
-//    s_out=QString::number(i);
-//    ui->resout->setText(s_out);
-
 }
 
 MainWindow::~MainWindow()
@@ -252,7 +248,7 @@ double MainWindow::op(std::string a)
     return num.pop();
 }
 
-bool MainWindow::exp_legal()//判断是否以+-*/.(结尾， 不是返回ture
+bool MainWindow::exp_legal()//判断是否以 +-*/.( 结尾， 不是返回ture
 {
     if((s_exp.isEmpty()))
     {
@@ -270,7 +266,15 @@ bool MainWindow::exp_legal()//判断是否以+-*/.(结尾， 不是返回ture
 
 void MainWindow::on_Bmul_clicked()//乘号
 {
-    if(exp_legal()&&!(s_exp.isEmpty()))
+    if(s_exp.isEmpty())
+    {
+        s_exp=s_out;
+        s_see=s_out;
+        s_exp+='*';
+        s_see+="×";
+        ui->expout->setText(s_see);
+    }
+    else if(exp_legal()&&!(s_exp.isEmpty()))
     {
         s_exp+='*';
         s_see+="×";
@@ -287,7 +291,15 @@ void MainWindow::on_Bmul_clicked()//乘号
 
 void MainWindow::on_Bdiv_clicked()//除号
 {
-    if(exp_legal()&&!(s_exp.isEmpty()))
+    if(s_exp.isEmpty())
+    {
+        s_exp=s_out;
+        s_see=s_out;
+        s_exp+='/';
+        s_see+="÷";
+        ui->expout->setText(s_see);
+    }
+    else if(exp_legal()&&!(s_exp.isEmpty()))
     {
         s_exp+='/';
         s_see+="÷";
@@ -304,7 +316,15 @@ void MainWindow::on_Bdiv_clicked()//除号
 
 void MainWindow::on_Badd_clicked()//加法
 {
-    if(exp_legal()&&!(s_exp.isEmpty()))
+    if(s_exp.isEmpty())
+    {
+        s_exp=s_out;
+        s_see=s_out;
+        s_exp+='+';
+        s_see+="+";
+        ui->expout->setText(s_see);
+    }
+    else if(exp_legal()&&!(s_exp.isEmpty()))
     {
         s_exp+='+';
         s_see+="+";
@@ -321,7 +341,15 @@ void MainWindow::on_Badd_clicked()//加法
 
 void MainWindow::on_Bsub_clicked()//减法
 {
-    if(exp_legal())
+    if(s_exp.isEmpty())
+    {
+        s_exp=s_out;
+        s_see=s_out;
+        s_exp+='-';
+        s_see+="-";
+        ui->expout->setText(s_see);
+    }
+    else if(exp_legal())
     {
         s_exp+='-';
         s_see+="-";
@@ -435,6 +463,7 @@ void MainWindow::on_Bac_clicked()
     s_exp.clear();
     s_see.clear();
     s_out.clear();
+    cur_senacc=0;
     ui->expout->setText("0");
     ui->resout->setText("0");
 }
