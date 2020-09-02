@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>680</width>
+    <width>672</width>
     <height>334</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>672</width>
+    <height>334</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>672</width>
+    <height>334</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>计算器</string>
@@ -20,7 +32,7 @@
    <widget class="QPushButton" name="B4">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>180</y>
       <width>163</width>
       <height>48</height>
@@ -39,7 +51,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="B6">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>330</x>
       <y>180</y>
       <width>163</width>
       <height>48</height>
@@ -58,7 +70,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="B1">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>220</y>
       <width>163</width>
       <height>48</height>
@@ -77,7 +89,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="B5">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>170</x>
       <y>180</y>
       <width>163</width>
       <height>48</height>
@@ -105,7 +117,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="B2">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>170</x>
       <y>220</y>
       <width>163</width>
       <height>48</height>
@@ -124,7 +136,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="B3">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>330</x>
       <y>220</y>
       <width>163</width>
       <height>48</height>
@@ -143,7 +155,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="B7">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>140</y>
       <width>163</width>
       <height>48</height>
@@ -162,7 +174,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="Bcur_right">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>170</x>
       <y>100</y>
       <width>163</width>
       <height>48</height>
@@ -181,7 +193,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="B9">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>330</x>
       <y>140</y>
       <width>163</width>
       <height>48</height>
@@ -200,7 +212,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="B0">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>260</y>
       <width>163</width>
       <height>48</height>
@@ -219,7 +231,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="Bdot">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>170</x>
       <y>260</y>
       <width>163</width>
       <height>48</height>
@@ -238,7 +250,7 @@ font:20pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="Beq">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>330</x>
       <y>260</y>
       <width>163</width>
       <height>48</height>
@@ -257,7 +269,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="Bmul">
     <property name="geometry">
      <rect>
-      <x>500</x>
+      <x>490</x>
       <y>180</y>
       <width>163</width>
       <height>48</height>
@@ -276,7 +288,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="Badd">
     <property name="geometry">
      <rect>
-      <x>500</x>
+      <x>490</x>
       <y>260</y>
       <width>163</width>
       <height>48</height>
@@ -298,7 +310,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="Bsub">
     <property name="geometry">
      <rect>
-      <x>500</x>
+      <x>490</x>
       <y>220</y>
       <width>163</width>
       <height>48</height>
@@ -317,7 +329,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="Bdiv">
     <property name="geometry">
      <rect>
-      <x>500</x>
+      <x>490</x>
       <y>140</y>
       <width>163</width>
       <height>48</height>
@@ -336,7 +348,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="Bac">
     <property name="geometry">
      <rect>
-      <x>500</x>
+      <x>490</x>
       <y>100</y>
       <width>163</width>
       <height>48</height>
@@ -355,7 +367,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QLabel" name="expout">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>-10</x>
       <y>0</y>
       <width>675</width>
       <height>42</height>
@@ -384,7 +396,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QLabel" name="resout">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>-10</x>
       <y>40</y>
       <width>675</width>
       <height>44</height>
@@ -413,7 +425,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="B8">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>170</x>
       <y>140</y>
       <width>163</width>
       <height>48</height>
@@ -432,7 +444,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="Bcur_left">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>100</y>
       <width>163</width>
       <height>48</height>
@@ -451,7 +463,7 @@ font: 18pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="Bback">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>330</x>
       <y>100</y>
       <width>163</width>
       <height>48</height>
