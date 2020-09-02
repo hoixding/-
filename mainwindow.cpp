@@ -8,8 +8,8 @@
 #include"op.h"
 
 QFont font_big ("KaiTi",30,52);//楷体，30号字，权重52（加粗一点点）
-QFont font_normal ("KaiTi",14,50);//楷体，14号字，权重50（正常）
-QFont font_little ("KaiTi",10,25);//楷体，10号字，权重25（字体变细）
+QFont font_normal ("KaiTi",20,50);//楷体，14号字，权重50（正常）
+QFont font_little ("KaiTi",12,25);//楷体，10号字，权重25（字体变细）
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -394,7 +394,7 @@ void MainWindow::on_Bsub_clicked()//减号，有注释
 
 void MainWindow::on_Beq_clicked()//等于
 {
-    ui->lineEdit->setText(s_exp);//测试用，输出op的参数
+
     if(s_exp.isEmpty())
     {
         ui->resout->setFont(font_big);
