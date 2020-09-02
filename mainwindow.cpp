@@ -395,7 +395,13 @@ void MainWindow::on_Bsub_clicked()//减号，有注释
 void MainWindow::on_Beq_clicked()//等于
 {
     ui->lineEdit->setText(s_exp);//测试用，输出op的参数
-    if(exp_legal())
+    if(s_exp.isEmpty())
+    {
+        ui->resout->setFont(font_big);
+        ui->expout->setFont(font_little);
+        ui->resout->setText("0");
+    }
+   else if(exp_legal())
     {
         //参数传入，将double类的传出转为qstring存入s_out
         r=this->op(s_exp.toStdString());
@@ -549,6 +555,8 @@ void MainWindow::on_Bback_clicked()//退格键
     setfont_normal();
     if(!s_exp.isEmpty())//不为空时，删除末尾的一个字符
     {
+        if(s_exp.right(1)==')')//删除字符为右括号时，括号计数器+1
+            cur_senacc+=1;
         s_exp= s_exp.left(s_exp.size() - 1);
         s_see= s_see.left(s_see.size() - 1);
         ui->expout->setText(s_see);
