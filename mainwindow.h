@@ -23,7 +23,7 @@ public:
     int cur_senacc=0;//括号计数器
     QString s_exp="";//传入op的参数，默认为空
     QString s_see="";//看到的表达式
-    QString s_out="";//结果
+    QString s_out="0";//结果
 private slots:
     void on_B1_clicked();
 

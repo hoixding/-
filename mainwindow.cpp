@@ -399,7 +399,7 @@ void MainWindow::on_Beq_clicked()//等于
     {
         ui->resout->setFont(font_big);
         ui->expout->setFont(font_little);
-        ui->resout->setText("0");
+        ui->resout->setText(s_out);
     }
    else if(exp_legal())
     {
@@ -502,9 +502,12 @@ void MainWindow::on_B0_clicked()
 void MainWindow::on_Bdot_clicked()//小数点键
 {
     setfont_normal();
-    s_exp+=".";
-    s_see+=".";
-    ui->expout->setText(s_see);
+    if(exp_legal())
+    {
+        s_exp+=".";
+        s_see+=".";
+        ui->expout->setText(s_see);
+    }
 }
 
 void MainWindow::on_Bac_clicked()//清空键，将会清空全部参数
