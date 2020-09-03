@@ -467,7 +467,9 @@ void MainWindow::on_Beq_clicked()//等于
     {
         s_exp=s_exp.right(s_exp.length()-1);
     }
-    if((s_exp.left(1)=='*')||(s_exp.left(1)=='/'))
+    if((s_exp.left(1)=='*')||(s_exp.left(1)=='/')\
+            ||(s_exp.indexOf("(*",0,Qt::CaseInsensitive)!=-1)||(s_exp.indexOf("(/",0,Qt::CaseInsensitive)!=-1||\
+                                                        (s_exp.indexOf("(+",0,Qt::CaseInsensitive)!=-1)))
     {
         s_exp.clear();
         s_see.clear();
