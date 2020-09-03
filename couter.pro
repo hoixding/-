@@ -34,4 +34,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES +=
-RC_ICONS = logo1.ico
+RC_ICONS = favicon.ico
