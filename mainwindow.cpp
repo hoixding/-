@@ -23,6 +23,66 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->expout->setText("0");//设置初始文本为0
     ui->resout->setText("");//设置初始文本为空
+    ui->B0->setStyleSheet("QPushButton:hover{background-color: rgb(219,219,219);} "
+                            "QPushButton{color:rgb(0, 0, 0);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";}"
+                            "QPushButton:pressed{background-color:rgb(200,200,200);} ");
+      ui->B1->setStyleSheet("QPushButton:hover{background-color: rgb(219,219,219);} "
+                            "QPushButton{color:rgb(0, 0, 0);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";}"
+                            "QPushButton:pressed{background-color:rgb(200,200,200);} ");
+      ui->B2->setStyleSheet("QPushButton:hover{background-color: rgb(219,219,219);} "
+                            "QPushButton{color:rgb(0, 0, 0);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";}"
+                            "QPushButton:pressed{background-color:rgb(200,200,200);} ");
+      ui->B3->setStyleSheet("QPushButton:hover{background-color: rgb(219,219,219);} "
+                            "QPushButton{color:rgb(0, 0, 0);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";}"
+                            "QPushButton:pressed{background-color:rgb(200,200,200);} ");
+      ui->B4->setStyleSheet("QPushButton:hover{background-color: rgb(219,219,219);} "
+                            "QPushButton{color:rgb(0, 0, 0);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";}"
+                            "QPushButton:pressed{background-color:rgb(200,200,200);} ");
+      ui->B5->setStyleSheet("QPushButton:hover{background-color: rgb(219,219,219);} "
+                            "QPushButton{color:rgb(0, 0, 0);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";}"
+                            "QPushButton:pressed{background-color:rgb(200,200,200);} ");
+      ui->B6->setStyleSheet("QPushButton:hover{background-color: rgb(219,219,219);} "
+                            "QPushButton{color:rgb(0, 0, 0);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";}"
+                            "QPushButton:pressed{background-color:rgb(200,200,200);} ");
+      ui->B7->setStyleSheet("QPushButton:hover{background-color: rgb(219,219,219);} "
+                            "QPushButton{color:rgb(0, 0, 0);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";}"
+                            "QPushButton:pressed{background-color:rgb(200,200,200);} ");
+      ui->B8->setStyleSheet("QPushButton:hover{background-color: rgb(219,219,219);} "
+                            "QPushButton{color:rgb(0, 0, 0);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";}"
+                            "QPushButton:pressed{background-color:rgb(200,200,200);} ");
+      ui->B9->setStyleSheet("QPushButton:hover{background-color: rgb(219,219,219);} "
+                            "QPushButton{color:rgb(0, 0, 0);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";}"
+                            "QPushButton:pressed{background-color:rgb(200,200,200);} ");
+      ui->Beq->setStyleSheet("QPushButton:hover{background-color: rgb(224,224,225);} "
+                            "QPushButton{color:rgb(255, 148, 82);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";background-color:rgb(246,246,246);}"
+                            "QPushButton:pressed{background-color:rgb(205,205,205);} ");
+      ui->Badd->setStyleSheet("QPushButton:hover{background-color: rgb(224,224,225);} "
+                            "QPushButton{color:rgb(255, 148, 82);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";background-color:rgb(246,246,246);}"
+                            "QPushButton:pressed{background-color:rgb(205,205,205);} ");
+      ui->Bsub->setStyleSheet("QPushButton:hover{background-color: rgb(224,224,225);} "
+                            "QPushButton{color:rgb(255, 148, 82);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";background-color:rgb(246,246,246);}"
+                            "QPushButton:pressed{background-color:rgb(205,205,205);} ");
+      ui->Bmul->setStyleSheet("QPushButton:hover{background-color: rgb(224,224,225);} "
+                            "QPushButton{color:rgb(255, 148, 82);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";background-color:rgb(246,246,246);}"
+                            "QPushButton:pressed{background-color:rgb(205,205,205);} ");
+      ui->Bdiv->setStyleSheet("QPushButton:hover{background-color: rgb(224,224,225);} "
+                            "QPushButton{color:rgb(255, 148, 82);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";background-color:rgb(246,246,246);}"
+                            "QPushButton:pressed{background-color:rgb(205,205,205);} ");
+      ui->Bac->setStyleSheet("QPushButton:hover{background-color: rgb(224,224,225);} "
+                            "QPushButton{color:rgb(255, 148, 82);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";background-color:rgb(246,246,246);}"
+                            "QPushButton:pressed{background-color:rgb(205,205,205);} ");
+      ui->Bback->setStyleSheet("QPushButton:hover{background-color: rgb(224,224,225);} "
+                            "QPushButton{color:rgb(255, 148, 82);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";background-color:rgb(246,246,246);}"
+                            "QPushButton:pressed{background-color:rgb(205,205,205);} ");
+      ui->Bcur_right->setStyleSheet("QPushButton:hover{background-color: rgb(224,224,225);} "
+                            "QPushButton{color:rgb(255, 148, 82);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";background-color:rgb(246,246,246);}"
+                            "QPushButton:pressed{background-color:rgb(205,205,205);} ");
+      ui->Bcur_left->setStyleSheet("QPushButton:hover{background-color: rgb(224,224,225);} "
+                            "QPushButton{color:rgb(255, 148, 82);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";background-color:rgb(246,246,246);}"
+                            "QPushButton:pressed{background-color:rgb(205,205,205);} ");
+      ui->Bdot->setStyleSheet("QPushButton:hover{background-color: rgb(224,224,225);} "
+                            "QPushButton{color:rgb(255, 148, 82);border:3px solid  rgb(235,235,235);font: 18pt  \"Arial\";background-color:rgb(246,246,246);}"
+                            "QPushButton:pressed{background-color:rgb(205,205,205);} ");
 
 }
 
@@ -291,11 +351,14 @@ void MainWindow::on_Bmul_clicked()//乘号，有注释
     setfont_normal();
     if(s_exp.isEmpty())//表达式为空时，自动使用上次的结果
     {
+        if(!(s_out.isEmpty()))
+        {
         s_exp=s_out;
         s_see=s_out;
         s_exp+='*';
         s_see+="×";
         ui->expout->setText(s_see);
+        }
     }
     else if(exp_legal()&&!(s_exp.isEmpty()))//符合exp_legal函数时，追加乘号
     {
@@ -317,11 +380,14 @@ void MainWindow::on_Bdiv_clicked()//除号
     setfont_normal();
     if(s_exp.isEmpty())
     {
+        if(!(s_out.isEmpty()))
+        {
         s_exp=s_out;
         s_see=s_out;
         s_exp+='/';
         s_see+="÷";
         ui->expout->setText(s_see);
+        }
     }
     else if(exp_legal()&&!(s_exp.isEmpty()))
     {
@@ -343,11 +409,14 @@ void MainWindow::on_Badd_clicked()//加号
     setfont_normal();
     if(s_exp.isEmpty())
     {
+        if(!(s_out.isEmpty()))
+        {
         s_exp=s_out;
         s_see=s_out;
         s_exp+='+';
         s_see+="+";
         ui->expout->setText(s_see);
+        }
     }
     else if(exp_legal()&&!(s_exp.isEmpty()))
     {
@@ -394,14 +463,24 @@ void MainWindow::on_Bsub_clicked()//减号，有注释
 
 void MainWindow::on_Beq_clicked()//等于
 {
-
-    if(s_exp.isEmpty())
+    if(s_exp.left(1)=='+')
+    {
+        s_exp=s_exp.right(s_exp.length()-1);
+    }
+    if((s_exp.left(1)=='*')||(s_exp.left(1)=='/'))
+    {
+        s_exp.clear();
+        s_see.clear();
+        ui->expout->setText("0");
+        ui->resout->setText("0");
+    }
+    else if(s_exp.isEmpty())
     {
         ui->resout->setFont(font_big);
         ui->expout->setFont(font_little);
         ui->resout->setText(s_out);
     }
-   else if(exp_legal())
+   else if(exp_legal()&&(cur_senacc==0))
     {
         //参数传入，将double类的传出转为qstring存入s_out
         r=this->op(s_exp.toStdString());
