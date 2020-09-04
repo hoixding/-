@@ -52,18 +52,14 @@ private:
     int size_stack;
 public:
 
-    my_Stack() {
+    my_Stack(){
         size_stack = 150;
         data = new T[150];
         if (data == NULL)
             exit(0);
         top = -1;
     };
-    ~my_Stack() {
-
-        delete[] data;
-
-    };
+    ~my_Stack() {delete[] data;};
     bool empty() const { return top == -1; }
     int size() const { return top + 1; }
     void clear() { top = -1; }
@@ -72,7 +68,6 @@ public:
     T  getTop() const;
 
 };
-
 template <class T>
 void my_Stack<T>::push(const T& x) {
     if (top == size_stack - 1)
