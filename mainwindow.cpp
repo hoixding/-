@@ -258,7 +258,15 @@ void MainWindow::on_Beq_clicked()//等于
     {
         //参数传入，将double类的传出转为qstring存入s_out
         r=this->op(s_exp.toStdString());
-        s_out=QString::number(r);
+        s_out=QString("%1").arg(r, 0, 'f', 9);//保持有效数字，不用科学计数法
+        if(s_out.indexOf('.',1,Qt::CaseInsensitive)!=-1)
+        {
+           while(s_out.right(1)=='0')
+                s_out=s_out.left(s_out.size() - 1);
+           if(s_out.right(1)=='.')
+                s_out=s_out.left(s_out.size() - 1);
+        }//丢弃末尾的0以及.
+
         //参数清零
         s_exp.clear();
         s_see.clear();
@@ -366,6 +374,7 @@ void MainWindow::on_Bdot_clicked()//小数点键
 void MainWindow::on_Bac_clicked()//清空键，将会清空全部参数
 {
     setfont_normal();
+
     s_exp.clear();
     s_see.clear();
     s_out.clear();
