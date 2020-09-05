@@ -20,6 +20,9 @@ public:
     double op(std::string a);
     bool exp_legal();
     void setfont_normal();
+    bool sym_judge(QChar a);
+
+    const QString num="0123456789";
     int cur_senacc=0;//括号计数器
     QString s_exp="";//传入op的参数，默认为空
     QString s_see="";//看到的表达式
@@ -64,7 +67,6 @@ private slots:
     void on_Bcur_right_clicked();
 
     void on_Bback_clicked();
-
 private:
     Ui::MainWindow *ui;
 
