@@ -35,3 +35,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES +=
 RC_ICONS = favicon.ico
+
+VERSION = 1.2.2.0
