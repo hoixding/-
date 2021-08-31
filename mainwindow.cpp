@@ -1,12 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDesktopWidget>
-#include<QString>
-#include<QTextEdit>
+#include <QString>
+#include <QTextEdit>
 #include <QLineEdit>
 #include <QDebug>
-#include<QTime>
-#include"op.h"
+#include <QTime>
+#include "op.h"
 #include "calculator.h"
 
 //使用的字体定义，使用全局变量方便修改
@@ -552,6 +552,8 @@ void MainWindow::on_Bback_clicked()//退格键
     {
         if(s_exp.right(1)==')')//删除字符为右括号时，括号计数器+1
             cur_senacc+=1;
+        else if(s_exp.right(1)=='(')//删除字符为左括号时，括号计数器-1
+            cur_senacc-=1;
         s_exp= s_exp.left(s_exp.size() - 1);
         s_see= s_see.left(s_see.size() - 1);
         ui->expout->setText(s_see);
